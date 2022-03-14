@@ -1,37 +1,90 @@
-#include<stdio.h>
+#include <stdio.h>
+#include<string.h>
+#include<ctype.h>
 
-void copy_arr(double* target1,double* sourse,int size);
-void copy_ptr(double* target2,double* sourse,int size);
-void copy_pptr(double* target3,double* sourse,double* sourse2);
-
-int main(void){
-    double sourse[5] ={1.1,2.2,3.3,4.4,5.5};
-    double target1[5],target2[5],target3[5];
-    copy_arr(target1,sourse,5);
-    copy_ptr(target2,sourse,5);
-    copy_pptr(target3,sourse,sourse + 5);
+char* s_gets(char* st,int n);
+int strlenth(char *);
+int main(void)
+{
+    char ss[80];
+    s_gets(ss,80);
+    puts(ss);
+    printf("%d",strlenth(ss));
+    
     return 0;
 }
-void copy_arr(double* target1,double* sourse,int size){
-    for(int i = 0;i < size;i++){
-        target1[i] = sourse[i];
-        printf("%.2f  ",target1[i]);
-    }
-    printf("\n");
-}
-void copy_ptr(double* target2,double* sourse,int size){
-    for (int i = 0; i < size; i++ ,target2 ++,sourse ++)
+
+/* char* s_gets(char* st,int n){
+    char * str_val;
+    str_val = fgets(st,n,stdin);
+    while(str_val)
     {
-        *target2 =  *sourse;
-        printf("%.2f  ",*target2);
+        if(*str_val == '\n')
+            *str_val = '\0';
+        else if(*str_val == '\0')
+            return st;
+        else
+            str_val ++;
     }
-    printf("\n");
+    return st;
 }
-void copy_pptr(double* target3,double* sourse,double* sourse2){
-    for (; sourse < sourse2;target3 ++,sourse ++)
+ */
+int strlenth(char * str)
+{
+    int i = 0;
+    while(str){
+        if(*str != '\0')
+        {
+            putchar(*str);
+            printf(" %d\n",i);
+            i++;
+            str ++;
+        }
+        else
+            return i;
+    }
+}
+
+char * s_gets(char * st, int n)
+{
+    char * ret_val;
+    int i = 0;
+    ret_val = fgets(st, n, stdin);
+    if (ret_val) // 即，ret_val != NULL
     {
-        *target3 =  *sourse;
-        printf("%.2f  ",*target3);
+        char* temp = strchr(ret_val,'\n');
+        *temp = '\0';
     }
-    printf("\n");
+    return ret_val;
 }
+
+/* char * s_gets(char * st, int n)
+{
+    char * ret_val;
+    int i = 0;
+    ret_val = fgets(st, n, stdin);
+    if (ret_val) // 即，ret_val != NULL
+    {
+        while (st[i] != '\n' && st[i] != '\0')
+            i++;
+        if (st[i] == '\n')
+            st[i] = '\0';
+        else
+            while (getchar() != '\n')
+                continue;
+    }
+    return ret_val;
+} */
+
+char * space(char * st)
+{
+    while(st){
+        if(*st == '\0')
+            return NULL;
+        else if(*st == ' ')
+            return st;
+        else
+            st ++;
+    }
+}
+
