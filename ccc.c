@@ -50,7 +50,7 @@ char * s_gets(char * st, int n)
     char * ret_val;
     int i = 0;
     ret_val = fgets(st, n, stdin);
-    if (ret_val) // 即，ret_val != NULL
+    if (ret_val) // 即,ret_val != NULL
     {
         char* temp = strchr(ret_val,'\n');
         *temp = '\0';
@@ -63,7 +63,7 @@ char * s_gets(char * st, int n)
     char * ret_val;
     int i = 0;
     ret_val = fgets(st, n, stdin);
-    if (ret_val) // 即，ret_val != NULL
+    if (ret_val) // 即,ret_val != NULL
     {
         while (st[i] != '\n' && st[i] != '\0')
             i++;
