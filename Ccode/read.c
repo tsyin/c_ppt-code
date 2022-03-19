@@ -4,9 +4,9 @@
 int main(int argc,char *argv[]){
     FILE* fp,*s;
     int ch;
-    if(fp = fopen(argv[1],"r") == NULL)
+    if((fp = fopen(argv[1],"r")) == NULL)
         fprintf(stderr,"not open 1file!\n");
-    if(s = fopen("temp.txt","w") == NULL)
+    if((s = fopen("temp.txt","w")) == NULL)
         fprintf(stderr,"not open 2file!\n");   
     while((ch = getc(fp)) != EOF)
         putc(ch,s);
