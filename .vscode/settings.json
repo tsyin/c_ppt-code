@@ -2,6 +2,7 @@
     "files.associations": {
         "tidl_alg_int.h": "c",
         "limits": "c",
-        "stdio.h": "c"
+        "stdio.h": "c",
+        "typeinfo": "c"
     }
 }
