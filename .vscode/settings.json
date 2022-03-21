@@ -3,6 +3,7 @@
         "tidl_alg_int.h": "c",
         "limits": "c",
         "stdio.h": "c",
-        "typeinfo": "c"
+        "typeinfo": "c",
+        "cstdio": "c"
     }
 }
