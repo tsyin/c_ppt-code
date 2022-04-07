@@ -4,6 +4,7 @@
         "limits": "c",
         "stdio.h": "c",
         "typeinfo": "c",
-        "cstdio": "c"
+        "cstdio": "c",
+        "stdlib.h": "c"
     }
 }
