@@ -5,6 +5,7 @@
         "stdio.h": "c",
         "typeinfo": "c",
         "cstdio": "c",
-        "stdlib.h": "c"
+        "stdlib.h": "c",
+        "math.h": "c"
     }
 }

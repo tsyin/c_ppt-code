@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
+#include<math.h>
 
 int main(void){
     printf("输入你想要写入的文件名:");
