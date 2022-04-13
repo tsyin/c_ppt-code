@@ -6,6 +6,8 @@
         "typeinfo": "c",
         "cstdio": "c",
         "stdlib.h": "c",
-        "math.h": "c"
+        "math.h": "c",
+        "ctype.h": "c",
+        "cctype": "c"
     }
 }
