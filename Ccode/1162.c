@@ -21,13 +21,15 @@ int main(void)
     // unsigned int isuppers = 00000010;
     // unsigned int islowers = 00000100;
     // unsigned int isteshus = 00001000;
-    int time =  scanf("%d",);
-    for(int k = scanf("%d",) >=1){
+    int time;
+    scanf("%d",&time);
+    for(int k = time;time >0;time --){
         // kind = 00000000;
         int isnums = 0;
         int isuppers = 0;
         int islowers = 0;
         int isteshus = 0;
+        scanf("%s",password);
         if(strlen(password)>16 || strlen(password) < 8){
             puts("NO");
             continue;
