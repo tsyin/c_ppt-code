@@ -9,7 +9,7 @@
             "command": "gcc",
             "args": [
                 "-g",
-                "\"${file}\"",
+                "\"${file}\"","\"${fileDirname}\\list.c\"",
                 "-o",
                 "\"${fileDirname}\\${fileBasenameNoExtension}.exe\""
                 // 设置编译后的可执行文件的字符集为 GB2312:
